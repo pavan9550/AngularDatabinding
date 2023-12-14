@@ -1,0 +1,8 @@
+<img [src]="product.image">
+<p>Name :  {{product.name}}</p>
+<p>Price : {{'$' + product.price}}</p>
+<p>Color : {{product.color}}</p>
+<p>Discounted Price Using expresssion : {{'$' + (product.price - (product.discount/100) * product.price)}}</p>
+<p>Discounted Price Using function    : {{'$' + getDiscountedPrice().toFixed(2)}}</p>
+<p>{{product.inStock>0 ? 'Only'+product.inStock+' is Available' : 'Product is Not available'}}</p>
+<button [disabled]="!product.inStock">BuyNow</button>

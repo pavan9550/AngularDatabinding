@@ -1,0 +1,90 @@
+DataBinding::
+=============
+->  DataBinding in Angular Allows us to Communicate between 
+    a Component class and its Corresponding viewTemplate & Vice-versa.
+
+    Component [ UI Logic ]    Communication between Component & viewTemplate     ViewTemplate [ HTML ]
+                            <-----------------------------------------------> 
+
+
+DataBinding Can be done by
+   -> Component class to ViewTemplate 
+   -> viewTemplate to ComponentClass
+   -> Both Ways.
+
+
+DataBinding is Divided into Two Different Types
+
+1.  OneWay DataBinding
+    ==================
+    OneWay DataBinding is When,data can be access from ComponentClass to Corresponding ViewTemplate or Vice-Versa.
+    Note:  Only one way is possible.
+
+    we can divide OneWay DataBinding into two different types.
+
+    1. ComponentClass to viewTemplate 
+       -> Data is passed from ComponentClass to viewTemplate.
+
+          Can be Achieved in Two Ways.
+          1. "STRING INTERPOLATION"   {{data}}
+          2. "PROPERTY BINDING"       [property] = data
+
+    2. ViewTemplate to ComponentClass
+       -> Data is passed from viewTemplate to ComponentClass.
+
+          Can be Achieved in Below way
+          1. "EVENT BINDING"         (data) = "expresssion"
+
+          
+
+2.  TwoWay DataBinding
+    ==================
+
+    1. Data Flows in Both the Direction in the same Time.
+    2. If we change someThing in ComponentClass, That will reflect in ViewTemplate
+       If we change someThing in ViewTemplate, That will reflect in ComponentClass
+
+    3. we use [(ngModel)] to Achieve this.
+
+
+
+
+
+
+
+
+
+
+
+"STRING INTERPOLATION"  {{ }}
+======================
+
+1. OneWay Databinding . Data Flows From ComponentClass to viewTemplate.
+2. Use Property Name / TS expression / Function Call  inside the double curly bases {{}}
+3. We can use Ternary Operator also in Stirng Interpolation
+
+
+
+"PROPERTY BINDING" []
+=====================
+
+1. OneWay DataBinding. Data Flows From ComponentClass to ViewTemplate.
+
+
+
+
+Q.>  "STRING INTERPOLATION" And "PROPERTY BINDING" Both are OneWay DataBinding Types [ ComponentClass to ViewTemplate ]
+      What is the difference between them???
+
+A.>  "STRING INTERPOLATION" is used to just display a piece of data in the HTML, Such as Title / Name.
+  
+     "PROPERTY BINDING" to bind the "property of a DOM object" to "Some Value,which we have in Component Class" 
+     "PROPERTY BINDING" allows us to show/hide a DOM Element  "OR" to Manipulate the DOM in another way.
+
+
+     Note:: For Html Properties like "Disabled / Hidden / Checked"  STRING INTERPOLATION will not work
+            Need to use PROPERTY BINDING
+
+     When There is need to display the Value -> "STRING INTERPOLATION"
+     When There is need to Assign dynamicValue to HTML Attribbute -> "PROPERTY BINDING"
+ 
